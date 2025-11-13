@@ -70,5 +70,11 @@ namespace FakeMadrid.Views
         {
             toolStripStatusLabel1.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
+
+        private void PlayerListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListPlayer frm = new frmListPlayer();
+            frm.Show();
+        }
     }
 }

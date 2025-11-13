@@ -70,7 +70,7 @@
             this.panelHead.Controls.Add(this.mStripToolBox);
             this.panelHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHead.Location = new System.Drawing.Point(0, 0);
-            this.panelHead.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHead.Margin = new System.Windows.Forms.Padding(4);
             this.panelHead.Name = "panelHead";
             this.panelHead.Size = new System.Drawing.Size(1942, 73);
             this.panelHead.TabIndex = 0;
@@ -80,7 +80,7 @@
             this.imgTrophy.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgTrophy.Image = global::FakeMadrid.Properties.Resources._15C1_removebg_preview;
             this.imgTrophy.Location = new System.Drawing.Point(1776, 0);
-            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgTrophy.Margin = new System.Windows.Forms.Padding(4);
             this.imgTrophy.Name = "imgTrophy";
             this.imgTrophy.Size = new System.Drawing.Size(83, 73);
             this.imgTrophy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,7 +92,7 @@
             this.imgLogo.Dock = System.Windows.Forms.DockStyle.Right;
             this.imgLogo.Image = global::FakeMadrid.Properties.Resources.Logo;
             this.imgLogo.Location = new System.Drawing.Point(1859, 0);
-            this.imgLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
             this.imgLogo.Name = "imgLogo";
             this.imgLogo.Size = new System.Drawing.Size(83, 73);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,6 +207,7 @@
             this.PlayerListToolStripMenuItem.Name = "PlayerListToolStripMenuItem";
             this.PlayerListToolStripMenuItem.Size = new System.Drawing.Size(327, 30);
             this.PlayerListToolStripMenuItem.Text = "DANH SÁCH CẦU THỦ";
+            this.PlayerListToolStripMenuItem.Click += new System.EventHandler(this.PlayerListToolStripMenuItem_Click);
             // 
             // PlayerContractToolStripMenuItem
             // 
@@ -286,7 +287,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mStripToolBox;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDashBoard";
