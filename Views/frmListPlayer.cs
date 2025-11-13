@@ -37,28 +37,89 @@ namespace FakeMadrid.Views
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //Lấy dữ liệu từ form
-            int playerId = int.Parse(txtPlayerId.Text); // Nếu player_id tự sinh (IDENTITY) thì không cần
+            // 1. Kiểm tra ID
+            if (string.IsNullOrWhiteSpace(txtPlayerId.Text))
+            {
+                MessageBox.Show("Bạn phải nhập ID cầu thủ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPlayerId.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txtPlayerId.Text, out int playerId))
+            {
+                MessageBox.Show("ID cầu thủ phải là số nguyên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPlayerId.Focus();
+                return;
+            }
+
+            // 2. Lấy dữ liệu từ form
             string playerName = txtPlayerName.Text;
-            int jerseyNumber = int.Parse(txtSoAo.Text);
-            string position = cbbViTri.SelectedItem.ToString();
+            if (string.IsNullOrWhiteSpace(playerName))
+            {
+                MessageBox.Show("Bạn phải nhập tên cầu thủ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPlayerName.Focus();
+                return;
+            }
+
+            if (!int.TryParse(txtSoAo.Text, out int jerseyNumber))
+            {
+                MessageBox.Show("Số áo phải là số nguyên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoAo.Focus();
+                return;
+            }
+
+            string position = cbbViTri.SelectedItem?.ToString();
+            if (string.IsNullOrWhiteSpace(position))
+            {
+                MessageBox.Show("Bạn phải chọn vị trí!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cbbViTri.Focus();
+                return;
+            }
+
             DateTime dateOfBirth = dtpNgaySinh.Value;
             string email = txtEmail.Text;
             string phone = txtPhoneNumber.Text;
             string nationality = txtQuocTich.Text;
-            decimal height = decimal.Parse(txtChieuCao.Text);
-            decimal weight = decimal.Parse(txtCanNang.Text);
-            string preferredFoot = cbbChanThuan.SelectedItem.ToString();
+
+            if (!decimal.TryParse(txtChieuCao.Text, out decimal height))
+            {
+                MessageBox.Show("Chiều cao phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtChieuCao.Focus();
+                return;
+            }
+
+            if (!decimal.TryParse(txtCanNang.Text, out decimal weight))
+            {
+                MessageBox.Show("Cân nặng phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtCanNang.Focus();
+                return;
+            }
+
+            string preferredFoot = cbbChanThuan.SelectedItem?.ToString();
             DateTime joinDate = dtpNgayGiaNhap.Value;
             DateTime contractEndDate = dtpNgayHetHan.Value;
-            decimal marketValue = decimal.Parse(txtGia.Text);
-            decimal salary = decimal.Parse(txtLuong.Text);
-            string previousClub = txtCLBTruoc.Text;
-            string status = cbbTrangThai.SelectedItem.ToString();
 
+            if (!decimal.TryParse(txtGia.Text, out decimal marketValue))
+            {
+                MessageBox.Show("Giá trị thị trường phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGia.Focus();
+                return;
+            }
+
+            if (!decimal.TryParse(txtLuong.Text, out decimal salary))
+            {
+                MessageBox.Show("Lương phải là số!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLuong.Focus();
+                return;
+            }
+
+            string previousClub = txtCLBTruoc.Text;
+            string status = cbbTrangThai.SelectedItem?.ToString();
+
+            // 3. Kết nối DB
             DataClassesQuanLyDoiBongDataContext db = new DataClassesQuanLyDoiBongDataContext();
 
-            // Kiểm tra trùng khóa chính (nếu bạn muốn dùng player_id tự sinh thì bỏ đoạn này)
+            // 4. Kiểm tra trùng ID
             Player player = db.Players.Where(p => p.player_id == playerId).SingleOrDefault();
             if (player != null)
             {
@@ -67,11 +128,9 @@ namespace FakeMadrid.Views
                 return;
             }
 
-            // Thêm mới
+            // 5. Tạo mới Player và gán dữ liệu
             player = new Player();
-            // Nếu player_id là IDENTITY thì không gán
-            // player.player_id = playerId; 
-
+            player.player_id = playerId;
             player.player_name = playerName;
             player.jersey_number = jerseyNumber;
             player.position = position;
@@ -89,10 +148,12 @@ namespace FakeMadrid.Views
             player.previous_club = previousClub;
             player.status = status;
 
-            db.Players.InsertOnSubmit(player); // thêm mới
-            db.SubmitChanges(); // lưu vào DB
+            // 6. Thêm và lưu DB
+            db.Players.InsertOnSubmit(player);
+            db.SubmitChanges();
 
-            loadData(); // load lại DataGridView
+            // 7. Load lại dữ liệu và thông báo
+            loadData();
             MessageBox.Show("Thêm mới cầu thủ thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }

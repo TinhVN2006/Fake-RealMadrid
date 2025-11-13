@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DataClassesQuanLyDoiBong.cs">
+      <DependentUpon>DataClassesQuanLyDoiBong.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Database\DataClassesQuanLyDoiBong.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
