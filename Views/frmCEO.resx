@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Long" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\Long.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CEOLong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\CEOLong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmLogin\iconUser.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CEOSon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\CEOSon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CEOThai" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\CEOTHAI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CEOBao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\CEOBao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CEOTinh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\CEOTinh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ImageSanNha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmLogin\ImageSanNha.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\Bao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconPasss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmLogin\iconPasss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BackgoundCEO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frmCEO\BackgoundCEO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

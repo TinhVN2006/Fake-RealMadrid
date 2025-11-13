@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CEO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\frmCEO.cs">
@@ -82,6 +83,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\frmCEO.resx">
+      <DependentUpon>frmCEO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmCEOInfor.resx">
+      <DependentUpon>frmCEOInfor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\frmLogin\ImageSanNha.jpg" />
@@ -113,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\frmLogin\iconUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmCEO\BackgoundCEO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
