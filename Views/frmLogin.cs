@@ -87,11 +87,6 @@ namespace FakeMadrid.Views
             if (txtUser.Text == "son" && txtPass.Text == "son")
             {
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                frmCEO mainForm = new frmCEO();
-                mainForm.Show();
-                // Thực hiện các hành động sau khi đăng nhập thành công
-
                 this.Close();
             }
             else

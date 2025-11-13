@@ -17,7 +17,7 @@ namespace FakeMadrid
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCEO());
+            Application.Run(new frmDashBoard());
         }
     }
 }

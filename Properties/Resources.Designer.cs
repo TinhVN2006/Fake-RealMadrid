@@ -63,6 +63,16 @@ namespace FakeMadrid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _15C1_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("15C1-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackgoundCEO {
             get {
                 object obj = ResourceManager.GetObject("BackgoundCEO", resourceCulture);

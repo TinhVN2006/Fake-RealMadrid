@@ -89,6 +89,9 @@
     <EmbeddedResource Include="Views\frmCEOInfor.resx">
       <DependentUpon>frmCEOInfor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +125,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\frmCEO\BackgoundCEO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frmDashBoard\15C1-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
