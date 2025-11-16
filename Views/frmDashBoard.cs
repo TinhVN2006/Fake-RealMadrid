@@ -82,5 +82,17 @@ namespace FakeMadrid.Views
             frmListCoach frm = new frmListCoach();
             frm.Show();
         }
+
+        private void TitleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDanhHieu frm = new frmDanhHieu();    
+            frm.Show();
+        }
+
+        private void tHỐNGKÊToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongKe frm = new frmThongKe();
+            frm.Show();
+        }
     }
 }
